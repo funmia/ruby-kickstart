@@ -17,4 +17,4 @@ def get_squares(array)
   return found_square.sort 
 end 
 
-#shorter method: array.select { |num| array.include? num * num}
+#shorter method: array.select { |num| array.include? num * num}.sort
