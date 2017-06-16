@@ -7,3 +7,14 @@
 # get_squares [25, 4, 9, 6, 50, 16, 5] # => [4, 5]
 
 # This time you will have to define the method, it's called: get_squares
+
+
+def get_squares(array)
+  found_square = []
+	array.each do |num|
+    found_square << num if array.include?(num * num)
+  end 
+  return found_square.sort 
+end 
+
+#shorter method: array.select { |num| array.include? num * num}
