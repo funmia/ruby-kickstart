@@ -7,5 +7,10 @@
 
 class String
   def every_other_char
+    to_return = []
+    self.size.times do |index|
+      to_return << self[index]  if index.even?
+    end
+    return to_return.join
   end
 end
