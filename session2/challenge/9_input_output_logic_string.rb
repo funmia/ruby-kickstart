@@ -1,5 +1,5 @@
 # Taken from http://pragprog.com/titles/fr_ltp/learn-to-program
-#
+#0
 # Write a Deaf Grandma program. Whatever you say to grandma (whatever
 # you type in), she should respond with HUH?!  SPEAK UP, SONNY!, unless
 # you shout it (type in all capitals). If you shout, she can hear you
@@ -24,11 +24,15 @@
 # USER:     BYE
 
 def deaf_grandma
-
+	while answer = gets.chomp
+		break if answer == "BYE"
+		if answer == answer.upcase && answer != ""
+			puts "NO, NOT SINCE 1938!"
+		else 
+		puts "HUH?! SPEAK UP, SONNY!"
+		end 
+	end 
 end
-
-
-
 
 
 # This will call your code so you can run it from the terminal.
