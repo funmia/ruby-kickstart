@@ -6,3 +6,16 @@
 #
 # Example:
 # word_count "The dog and the cat" # => {"the" => 2, "dog" => 1, "and" => 1, "cat" => 1}
+
+
+def word_count(string)
+  to_return = {}
+  
+  string = string.downcase.split()
+ 
+  string.each_with_index do |item, index|
+    to_return[string[index]] = string.count(item)
+  end 
+  
+  to_return
+end 
