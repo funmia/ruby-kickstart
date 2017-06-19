@@ -8,3 +8,20 @@
 # staircase 4  # => {1 => [], 3 => [2]}
 # staircase 5  # => {1 => [], 3 => [2], 5 =>[2, 4]}
 
+def staircase(number)
+  to_return = Hash.new 
+  
+  for i in 1..number 
+    if i.odd?
+      to_return[i] = []
+    end 
+  end 
+  puts to_return #to check the output from the first loop.
+  
+  to_return.each do |key, value| 
+    for i in 2...key 
+      to_return[key] << i if i.even? 
+    end 
+  end 
+  to_return 
+end 
