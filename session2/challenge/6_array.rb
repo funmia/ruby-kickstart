@@ -14,3 +14,16 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
+
+
+def prime_chars?(array)
+array_size = array.join.size 
+
+  return false if array_size < 2 
+    
+  for i in 2...array_size
+    return false if array_size % i == 0 
+	end 
+	true 
+end 
+
